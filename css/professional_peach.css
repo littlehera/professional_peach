@@ -1,0 +1,298 @@
+/*!
+ * Professional Peach Theme v1.0
+ * Copyright 2019 littlehera
+ * Licensed under MIT
+ */
+
+/*HTML ELEMENTS/CONTAINERS*/
+* {
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0px;
+  font-family: 'Lato','Segoe UI Light', 'Helvetica', sans-serif;
+  font-size: 14px;
+  background-image: url("../pictures/pawel-czerwinski-CEr4ljpMSh4-unsplash.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+footer{
+  bottom:0;
+  color:white;
+  padding:10px;
+  text-align: center;
+  background:#0b2d3a;
+}
+
+h1,h3,h5{
+  font-family: 'Glory', 'Ubuntu Condensed', 'Sarabun',sans-serif;
+  padding:5px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+h2,h4{
+  font-family: 'Lato', 'Segoe UI Light', 'Helvetica', sans-serif;
+  padding:5px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+h1{
+  font-size: 46px;
+}
+
+h2{
+  font-size: 35px;
+}
+
+h3{
+  font-size: 28px;
+}
+
+h4{
+  font-size: 24px;
+}
+
+h5{
+  font-size: 20px;
+}
+
+h6{
+  font-size: 18px;
+}
+table{
+  width: inherit;
+}
+
+tr{
+  width: inherit;
+}
+td{
+  padding: 3px;
+}
+th{
+  text-align: left;
+}
+
+a{
+  color: #ffffff; 
+}
+
+/*NAVIGATION elements*/
+
+.nav{
+  background-color: #0c177ecc;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  position: fixed;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav .links{
+  display: table-cell;
+  vertical-align: middle;
+}
+.nav li{
+  list-style: none;
+}
+
+.nav a{
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  margin: auto;
+  min-width: 200px;
+} 
+
+.nav a:hover{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: #0c177e;
+  font-weight: 600;
+  border-radius: 15px;
+}
+
+.nav a:active{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: #e47c61;
+  font-weight: 600;
+  border-radius: 15px;
+}
+
+
+
+/*SECTION elements*/
+
+.page-content{
+  float: right!important;
+  display: block;
+}
+
+.top-page{
+  width: 850PX;
+  margin: 15% auto auto auto;
+  padding:50px 40px 20px 40px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  background: white;
+}
+
+.middle-page{
+  background: white;
+  width: 850PX;
+  margin: auto;
+  padding: 40px;
+}
+
+.bottom-page{
+  padding: 40px;
+  width: 850PX;
+  margin: auto;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background: white;
+}
+
+.header{
+  text-align: center;
+}
+
+.header .header-text{
+  margin: 50px 50px;
+}
+
+.subtitle{
+  padding:5px;
+}
+
+.header .title{
+  font-family: 'Segoe UI Regular', 'Sarabun', 'Helvetica',sans-serif;
+  margin-top: 60px;
+  font-weight: bolder;
+}
+
+.header .subtitle{
+  opacity: 0.6;
+}
+
+/*Icons and other Elements*/
+
+
+/*ALIGNMENT and SPACING*/
+.center-elements{
+  text-align: center;
+  align-self: center;
+  align-content: center;
+}
+
+.center-self{
+  align-self: center;
+  margin: auto auto;
+}
+
+.increased_horizontal_padding{
+  padding:0px 30px;
+}
+
+/*FORM ELEMENTS*/
+
+input{
+
+}
+
+textarea{
+
+}
+
+.button{
+
+}
+
+
+
+/** COLUMN SIZING AND MEDIA QUERIES**/
+.row{
+ padding: 30px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/*for all*/
+[class*="col-"] {
+  width: 100%;
+  float: left;
+}
+
+@media only screen and (max-width: 600px) {
+  /* For phones: */
+  .header{
+    padding:10px;
+  }
+  .nav-links .link-text{
+    display: none;
+  }
+  .nav-links a{
+    padding:0px 5px;
+  }
+
+  .float-left, .float-right{
+    float:unset!important;
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-md-1 {width: 8.33%;}
+  .col-md-2 {width: 16.66%;}
+  .col-md-3 {width: 25%;}
+  .col-md-4 {width: 33.33%;}
+  .col-md-5 {width: 41.66%;}
+  .col-md-6 {width: 50%;}
+  .col-md-7 {width: 58.33%;}
+  .col-md-8 {width: 66.66%;}
+  .col-md-9 {width: 75%;}
+  .col-md-10 {width: 83.33%;}
+  .col-md-11 {width: 91.66%;}
+  .col-md-12 {width: 100%;}
+
+
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+}
