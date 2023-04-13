@@ -31,7 +31,7 @@ footer{
   color:white;
   padding:10px;
   text-align: center;
-  background:#0b2d3a;
+  background:#202020;
 }
 
 h1,h3,h5{
@@ -93,6 +93,12 @@ a{
   color: #ffffff; 
 }
 
+p{
+  line-height: 30px;
+  text-align: justify;
+  font-size: 15px;
+}
+
 /*NAVIGATION elements*/
 
 .nav{
@@ -121,6 +127,7 @@ a{
   padding: 10px;
   margin: auto;
   min-width: 200px;
+  font-size: large;
 } 
 
 .nav a:hover{
@@ -133,8 +140,16 @@ a{
 
 .nav a:active{
   text-decoration: none;
-  color: rgb(255, 255, 255);
-  background-color: #e47c61;
+  color: #0c177e;
+  background-color: #F3B5AF; 
+  font-weight: 600;
+  border-radius: 15px;
+}
+
+.nav a:focus{
+  text-decoration: none;
+  color: #0c177e;
+  background-color: #F3B5AF; 
   font-weight: 600;
   border-radius: 15px;
 }
@@ -167,12 +182,20 @@ a{
 .bottom-page{
   padding: 40px;
   width: 850PX;
-  margin: auto;
+  margin: auto auto 15% auto;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
   background: white;
 }
 
+.inner-section{
+  padding: 0px 50px;
+}
+/*Header, Subtitle, Theme logo*/
+
+.theme-logo{
+  max-height: 150px;
+}
 .header{
   text-align: center;
 }
@@ -183,6 +206,10 @@ a{
 
 .subtitle{
   padding:5px;
+  opacity: 0.7;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 
 .header .title{
@@ -195,9 +222,57 @@ a{
   opacity: 0.6;
 }
 
+.peach
+{
+  color: #F0A7A0;
+}
 /*Icons and other Elements*/
 
+.separator{
+  width:500px;
+  height: 3px;
+  background-color: #b9b9b9;
+  display: inline-block;
+  margin:20px auto;
+}
 
+.icon-group{
+margin: 20px 0px;
+display: flex;
+justify-content: center;
+align-items: center;
+align-content: center;
+}
+
+.icon-square{
+  color: white;
+  background: #f0a7a0;
+  display: flex;
+  float: left;
+  font-size: 22px;
+  width: 42px;
+  height: 40px;
+  border-radius: 12px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: 0px 3px;
+}
+
+a.icon-square{
+  text-decoration: none;
+}
+a.icon-square:hover{
+  text-decoration: none;
+}
+a.icon-square:active{
+  text-decoration: none;
+}
+a.icon-square:focus{
+  text-decoration: none;
+}
 /*ALIGNMENT and SPACING*/
 .center-elements{
   text-align: center;
