@@ -43,7 +43,7 @@ h1,h3,h5{
   margin-inline-end: 0px;
 }
 
-h2,h4{
+h2,h4,h6{
   font-family: 'Lato', 'Segoe UI Light', 'Helvetica', sans-serif;
   padding:5px;
   margin-block-start: 0px;
@@ -74,6 +74,8 @@ h5{
 
 h6{
   font-size: 18px;
+  color: #4c4c4c;
+}
 }
 table{
   width: inherit;
@@ -176,20 +178,34 @@ p{
   background: white;
   width: 850PX;
   margin: auto;
-  padding: 40px;
+  padding: 0px 40px;
 }
 
 .bottom-page{
   padding: 40px;
   width: 850PX;
-  margin: auto auto 15% auto;
+  margin: 0px auto 15% auto;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
-  background: white;
+  background: rgb(71, 71, 71);
+  color: white;
 }
 
 .inner-section{
   padding: 0px 50px;
+}
+
+.masonry{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: center;
+  justify-items: start;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.masonry img{
+  width: 100%;
 }
 /*Header, Subtitle, Theme logo*/
 
@@ -209,7 +225,7 @@ p{
   opacity: 0.7;
   font-size: 25px;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .header .title{
@@ -226,12 +242,18 @@ p{
 {
   color: #F0A7A0;
 }
+
 /*Icons and other Elements*/
 
 .separator{
   width:500px;
   height: 3px;
   background-color: #b9b9b9;
+  display: inline-block;
+  margin:20px auto;
+}
+
+.separator-space{
   display: inline-block;
   margin:20px auto;
 }
@@ -250,7 +272,7 @@ align-content: center;
   display: flex;
   float: left;
   font-size: 22px;
-  width: 42px;
+  width: 40px;
   height: 40px;
   border-radius: 12px;
   padding: 8px;
@@ -266,6 +288,10 @@ a.icon-square{
 }
 a.icon-square:hover{
   text-decoration: none;
+  color:#f0a7a0;
+  border-radius: 12px;
+  border-style: solid;
+  background:#ffffff;
 }
 a.icon-square:active{
   text-decoration: none;
@@ -273,6 +299,40 @@ a.icon-square:active{
 a.icon-square:focus{
   text-decoration: none;
 }
+
+/*loading bars*/
+
+div.loading-group{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+
+div.loading-bg{
+  background: #8E8E8E;
+  height: 18px;
+  border-radius: 9px;
+}
+div.loading-fill{
+  max-width: inherit;
+  background: #f0a7a0;
+  height: inherit;
+  border-radius: 10px;
+}
+
+/*Pink Cards*/
+.pink-card{
+  background: #FFEBE9;
+  margin: 20px 0px 0px 0px;
+  border-radius: 15px;  
+}
+
+.pink-card ul li{
+  list-style: circle;
+}
+
 /*ALIGNMENT and SPACING*/
 .center-elements{
   text-align: center;
