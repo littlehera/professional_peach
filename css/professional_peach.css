@@ -202,6 +202,7 @@ p{
   justify-items: start;
   align-items: center;
   justify-content: space-evenly;
+  opacity: 1;
 }
 
 .masonry img{
@@ -322,11 +323,17 @@ div.loading-fill{
   border-radius: 10px;
 }
 
+.loading-fill-animate{
+  animation-name:loading;
+  animation-duration: 3s;
+}
+
 /*Pink Cards*/
 .pink-card{
   background: #FFEBE9;
   margin: 20px 0px 0px 0px;
-  border-radius: 15px;  
+  border-radius: 15px; 
+  visibility: hidden; 
 }
 
 .pink-card ul li{
@@ -430,4 +437,39 @@ textarea{
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
 
+}
+
+/*ANIMATION*/
+
+.float-in{
+  visibility: visible;
+  animation-name:float-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.pre-fade-in{
+  visibility: hidden;
+}
+
+.fade-in{
+  visibility: visible;
+  animation-name:fade-in;
+  animation-duration: 1s;
+  animation-timing-function:linear;
+}
+
+@keyframes loading {
+  0%   {max-width:0px}
+  100% {max-width:100%}
+}
+
+@keyframes float-in {
+  0%    { transform: translate(0,  20px); opacity: 0;}
+  100%  { transform: translate(0, -0px); opacity: 1;}   
+}
+
+@keyframes fade-in {
+  0%    {opacity: 0;}
+  100%  {opacity: 1;}   
 }

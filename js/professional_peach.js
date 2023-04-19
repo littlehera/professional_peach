@@ -1,6 +1,5 @@
-window.addEventListener('scroll', unhide_icon_cards, false);
-document.addEventListener('click',click_handler,false)
-
+//window.addEventListener('scroll', unhide_icon_cards, false);
+window.addEventListener('scroll', scroll_events, false);
 
 /*
 Custom Functions
@@ -31,39 +30,47 @@ function set_links_inactive(target_url){
   }
 }
 
-function click_handler(e){
-  //console.log(e.target);
-  var element_href = e.target.getAttribute('href');
-  var parent_href=e.target.parentNode.getAttribute('href');
-  //console.log("E:"+element_href+" | P:"+parent_href);
-  var target_url = (element_href !=null? element_href:parent_href);
-  set_links_inactive(target_url);
- //set_links_inactive(e.target.textContent);
+function scroll_events(){
+  loading_bar_animation();
+  float_in_animation();
+  fade_in_animation();
 }
 
-function unhide_icon_cards(){
-  var icon_cards = document.getElementsByClassName('icon-card');
-  for(var i=0;i<icon_cards.length;i++){
-    //console.log(icon_cards[i]);
-    var show_card = isScrolledIntoView(icon_cards[i]);
-    if (show_card){
-      icon_cards[i].className = "icon-card set-visible"
+function loading_bar_animation(){
+  var loading_bar = document.getElementsByClassName('loading-fill');
+  for(var i=0;i<loading_bar.length;i++){
+    var animate_loading = isScrolledIntoView(loading_bar[i]);
+    if (animate_loading){
+      if(!loading_bar[i].className.includes(" loading-fill-animate"))
+        loading_bar[i].className += " loading-fill-animate";
     }
   }
 }
 
-/*
-function handler(e){
- var txt='You clicked on a '+e.target.nodeName+'\n';
-    txt+='The innerHTML is '+e.target.innerHTML+'\n';
-    txt+='The text is '+e.target.textContent+'\n';
-    txt+='The parentNode is '+e.target.parentNode.nodeName+'\n';
- alert(txt)
+
+function float_in_animation(){
+  var html_element = document.getElementsByClassName('pink-card');
+  for(var i=0;i<html_element.length;i++){
+    var animate_float_in = isScrolledIntoView(html_element[i]);
+    if (animate_float_in){
+      if(!html_element[i].className.includes(" float-in")){
+        html_element[i].className += " float-in";
+      }
+    }
+  }
 }
-document.addEventListener('click',handler,false)
-*/
 
-
+function fade_in_animation(){
+  var html_element = document.getElementsByClassName('pre-fade-in');
+  for(var i=0;i<html_element.length;i++){
+    var animate_float_in = isScrolledIntoView(html_element[i]);
+    if (animate_float_in){
+      if(!html_element[i].className.includes(" fade-in")){
+        html_element[i].className += " fade-in";
+      }
+    }
+  }
+}
 
 
 function isScrolledIntoView(el) {
